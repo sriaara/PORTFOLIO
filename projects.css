@@ -1,0 +1,140 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #000000, #032286);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    animation: fadeIn 1.5s ease-in;
+}
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Slide-Up Animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 0;
+    margin-left: 90px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, .active {
+    color: limegreen;
+}
+nav ul li a.active {
+    color: limegreen;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Projects Section */
+.projects-section {
+    text-align: left;
+    padding: 50px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+/* Auto-Scrolling Wrapper */
+.projects-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+/* Project Items */
+.projects-container {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scrollLoop 20s linear infinite; /* Smooth continuous animation */
+}
+
+/* Define Smooth Scrolling Animation */
+@keyframes scrollLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Moves left by half, as images are duplicated */
+    }
+}
+
+/* Project Box */
+.project {
+    display: inline-block;
+    text-align: center;
+    flex: none;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: limegreen;
+}
+
+/* Project Images */
+.project img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}

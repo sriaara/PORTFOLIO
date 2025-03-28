@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #000000, #032286);
+    color: white;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Fit within the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+header {
+    width: 100%;
+    padding: 10px 40px; /* Consistent padding for all pages */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 40px; /* Consistent spacing between buttons */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00FFAA; /* Hover effect */
+}
+
+nav ul li a.active {
+    color: limegreen; /* Highlight active page */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    height: 100vh; /* Adjusted to fit within the screen */
+    box-sizing: border-box;
+}
+
+.text {
+    flex: 1;
+    max-width: 90%;
+}
+
+.text h1 {
+    font-size: 80px;
+    margin: 0;
+}
+
+.text p {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+/* Call-to-action Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #00FFAA;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #00FFAA;
+    color: black;
+    box-shadow: 0px 0px 15px #00FFAA;
+}
+
+/* Right Image */
+.image {
+    flex: 0;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 90vh; /* Full height */
+    padding-bottom: 90px;
+
+ box-sizing: 80px; /* Ensure padding is included in the height */
+}
+
+.image img {
+    height: 90vh; /* Make the image take the full height */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
